@@ -29,6 +29,6 @@ Route::get("/inputrt","InputRtController@index");
 Route::post("/inputrt","InputRtController@tambah")->name('tambah.rt');
 Route::get("/detailrt/{id}","InputRtController@Detil")->name('detil.rt');
 Route::post("/ubahrt/{id}","InputRtController@Ubah")->name('ubah.rt');
-Route::delete("/hapusrt/{id}","InputRtController@hapus")->name('hapus.rt');
+Route::post("/hapusrt/{id}","InputRtController@hapus")->name('hapus.rt');
 Route::get("/tentang1","TentangController@index1");
 Route::post("/datads/{id}","DataController@viewdetail")->name('detail.data');

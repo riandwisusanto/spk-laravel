@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>laravel bootstrap</title>
+	<title>SPK JAMKESMAS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="{{route('data.rt', $id)}}">Data Warga</a></li>
+					<li><a href="{{route('data.rt', $id)}}">Data Warga</a></li>
 					<li><a href="{{route('tambah.index', $id)}}">Input Data</a></li>
 					<li><a href="{{route('tentang.rt', $id)}}">Tentang</a></li>
 					<li><a href="{{url('')}}">Logout</a></li>

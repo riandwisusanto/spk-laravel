@@ -16,7 +16,7 @@
 		</tr>
 		@foreach($data as $p)
 		<tr>
-			<td><b>{{ $p->nama}}</b></td>
+			<td><b>{{$p->nama}}</b></td>
 			<td>{{$p->no_ktp}}</td>
 			<td>{{$p->dari_rt}}</td>
 			<td width="230px">
@@ -65,7 +65,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nama">Nama Lengkap : </label>
-											<input type="text" name="nama" class="form-control" value="{{$p->nama}}" >
+											<input required type="text" name="nama" class="form-control" value="{{$p->nama}}" >
 										</div>
 									</div>
 								</div>
@@ -73,7 +73,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nama">Dari RT : </label>
-											<input type="text" name="dari_rt" class="form-control"
+											<input required type="text" name="dari_rt" class="form-control"
 											value="{{$p->dari_rt}}"
 											>
 										</div>
@@ -83,7 +83,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="ktp">Nomor KTP : </label>
-											<input type="text" name="no_ktp" class="form-control"
+											<input required type="tel" pattern="[0-9]{16}" name="no_ktp" class="form-control"
 											value="{{$p->no_ktp}}"
 											>
 										</div>
@@ -101,7 +101,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nama">Username : </label>
-											<input type="text" name="username" class="form-control"
+											<input required type="text" name="username" class="form-control"
 											value="{{$p->username}}"
 											>
 										</div>
@@ -111,7 +111,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="nama">Password : </label>
-											<input type="text" name="password" class="form-control"
+											<input required minlength="8" maxlength="16" type="text" name="password" class="form-control"
 											>
 										</div>
 									</div>

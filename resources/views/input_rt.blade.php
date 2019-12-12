@@ -23,7 +23,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nama">Nama Lengkap : </label>
-							<input type="text" name="nama" class="form-control"
+							<input required type="text" name="nama" class="form-control"
 							>
 						</div>
 					</div>
@@ -32,7 +32,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nama">Dari RT : </label>
-							<input type="text" name="dari_rt" class="form-control"
+							<input required type="text" name="dari_rt" class="form-control"
 							>
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="ktp">Nomor KTP : </label>
-							<input type="text" name="no_ktp" class="form-control"
+							<input required type="tel" pattern="[0-9]{16}" name="no_ktp" class="form-control"
 							>
 						</div>
 					</div>
@@ -58,7 +58,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nama">Username : </label>
-							<input type="text" name="username" class="form-control"
+							<input required type="text" name="username" class="form-control"
 							>
 						</div>
 					</div>
@@ -67,7 +67,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nama">Password : </label>
-							<input type="text" name="password" class="form-control"
+							<input required minlength="8" maxlength="16" type="text" name="password" class="form-control"
 							>
 						</div>
 					</div>

@@ -8,9 +8,9 @@ class DataDsController extends Controller
 {
     public function view()
     {
-    	$data = UserModel::where('jabatan','rt')->get();
+        $data = UserModel::where('jabatan','rt')->get();
         $cek = PesertaModel::where('kirim','ya')->get();
-    	return view('Data_ds', compact('data', 'cek'));
+        return view('Data_ds', compact('data', 'cek'));
     }
 
     public function cetak()

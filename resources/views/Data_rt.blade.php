@@ -56,7 +56,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nama">Nama Lengkap : </label>
-							<input type="text" name="nama" value="{{$p->nama}}" class="form-control"
+							<input required type="text" name="nama" value="{{$p->nama}}" class="form-control"
 							>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="ktp">Nomor KTP : </label>
-							<input type="text" name="no_ktp" class="form-control"
+							<input name="no_ktp" required type="tel" pattern="[0-9]{16}" class="form-control"
 							value="{{$p->no_ktp}}">
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="alamat">Alamat : </label>
-							<textarea name="alamat" class="form-control" rows="4">{{$p->alamat}}</textarea>
+							<textarea required name="alamat" class="form-control" rows="4">{{$p->alamat}}</textarea>
 						</div>
 					</div>
 				</div>

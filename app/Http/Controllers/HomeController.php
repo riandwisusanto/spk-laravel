@@ -14,20 +14,24 @@ class HomeController extends Controller
     public function masuk(Request $req)
     {
         $usernm = UserModel::where(['username' => $req->nama])->first();
-        $username = $usernm->username;
-        $password = $usernm->password;
-        $id=$usernm->id;
-        if($usernm->username == $req->nama && $usernm->password == $req->password){
-            if($usernm->jabatan == 'rt'){
-                return redirect()->route('data.rt', $usernm->id );
+
+        if($usernm){
+            if($usernm->password == $req->password){
+                if($usernm->jabatan == 'rt'){
+                    return redirect()->route('data.rt', $usernm->id );
+                }
+                else{
+                    return redirect()->route('ds.data');
+                }
             }
             else{
-                return redirect()->route('ds.data');
+                echo "<script>alert('Password salah')</script>";
+                return view('home');
             }
-            return view('datart');
         }
         else{
-            return redirect('/')->with('Login Gagal');
+            echo "<script>alert('Username salah')</script>";
+            return view('home');
         }
     }
 }
